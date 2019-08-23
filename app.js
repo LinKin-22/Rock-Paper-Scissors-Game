@@ -8,6 +8,7 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
+// Get the computer choice
 function getComputerChoice(){
     const choices = ['r', 'p', 's'];
     const randomNumber = Math.floor(Math.random() * 3);
@@ -54,6 +55,7 @@ function draw(user, computer){
     setTimeout(() => userChoice_div.classList.remove('gray-glow'), 300);
 }
 
+// Define the game result functions
 function game(userChoice){
     const computerChoice = getComputerChoice();
     switch(userChoice + computerChoice) {
